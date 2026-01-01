@@ -4,7 +4,7 @@ A custom JavaFX weather widget designed for "Aero Dynamics", featuring aviation-
 
 ## Screenshot
 
-![Widget Screenshot](widget_screenshot.png)
+![Widget Screenshot](screenshot.png)
 
 ## Features
 - Aviation-themed UI
