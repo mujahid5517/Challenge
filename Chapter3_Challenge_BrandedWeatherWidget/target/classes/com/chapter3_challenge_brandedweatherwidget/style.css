@@ -1,0 +1,142 @@
+.root {
+    -fx-background-color: #1a1a1a;
+    -fx-font-family: 'Segoe UI', sans-serif;
+}
+
+.company-title {
+    -fx-text-fill: #3498db;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 2px;
+}
+
+.widget-title {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.input-label {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 14px;
+}
+
+.city-input {
+    -fx-background-color: #2c3e50;
+    -fx-text-fill: white;
+    -fx-border-color: #34495e;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+}
+
+.refresh-button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.refresh-button:hover {
+    -fx-background-color: #2980b9;
+}
+
+.refresh-button:disabled {
+    -fx-background-color: #7f8c8d;
+    -fx-opacity: 0.7;
+}
+
+.city-display {
+    -fx-text-fill: #ecf0f1;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+.temperature {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 64px;
+    -fx-font-weight: bold;
+}
+
+.condition {
+    -fx-text-fill: #f1c40f;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-letter-spacing: 1px;
+}
+
+.aircraft-shape {
+    -fx-fill: #95a5a6;
+    -fx-stroke: #7f8c8d;
+    -fx-stroke-width: 1px;
+}
+
+.metrics-panel {
+    -fx-background-color: #2c3e50;
+    -fx-background-radius: 8px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);
+}
+
+.metric-title {
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.metric-value {
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.wind-arrow {
+    -fx-fill: #3498db;
+}
+
+.forecast-panel {
+    -fx-background-color: #252525;
+    -fx-border-color: #333;
+    -fx-border-width: 1px 0 0 0;
+}
+
+.forecast-day {
+    -fx-background-color: #2c3e50;
+    -fx-padding: 10px;
+    -fx-background-radius: 6px;
+    -fx-min-width: 100px;
+}
+
+.forecast-day-label {
+    -fx-text-fill: #bdc3c7;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.forecast-temp {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.forecast-cond {
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 12px;
+}
+
+.forecast-flight {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 2px 6px;
+    -fx-background-radius: 3px;
+}
+
+.condition-good {
+    -fx-text-fill: #2ecc71;
+}
+
+.condition-marginal {
+    -fx-text-fill: #f1c40f;
+}
+
+.condition-poor {
+    -fx-text-fill: #e74c3c;
+}

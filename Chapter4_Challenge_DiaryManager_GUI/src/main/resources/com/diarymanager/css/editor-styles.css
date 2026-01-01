@@ -1,0 +1,271 @@
+/* Editor-specific styles */
+
+/* Rich text editor customizations */
+.html-editor {
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4px;
+    -fx-padding: 0;
+}
+
+.html-editor .tool-bar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 5px;
+}
+
+.html-editor .web-view {
+    -fx-background-color: white;
+    -fx-border-radius: 0 0 4px 4px;
+}
+
+/* Toolbar button styles */
+.toolbar-button {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-padding: 5px 10px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-min-width: 32px;
+    -fx-min-height: 32px;
+}
+
+.toolbar-button:hover {
+    -fx-background-color: #e9ecef;
+    -fx-border-color: #adb5bd;
+}
+
+.toolbar-button:pressed {
+    -fx-background-color: #dee2e6;
+}
+
+/* Specialized toolbar buttons */
+.bold-button {
+    -fx-font-weight: bold;
+}
+
+.italic-button {
+    -fx-font-style: italic;
+}
+
+.underline-button {
+    -fx-underline: true;
+}
+
+.align-button {
+    -fx-font-size: 14px;
+}
+
+.list-button {
+    -fx-font-size: 16px;
+}
+
+.color-button {
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a90e2;
+}
+
+.highlight-button {
+    -fx-background-color: #ffd54f;
+    -fx-text-fill: #856404;
+}
+
+.link-button {
+    -fx-text-fill: #1565c0;
+}
+
+.clear-button {
+    -fx-text-fill: #dc3545;
+}
+
+/* Button variations for editor */
+.button-primary {
+    -fx-background-color: #4a90e2;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.button-primary:hover {
+    -fx-background-color: #3a80d2;
+}
+
+.button-secondary {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #5a6268;
+}
+
+.button-danger {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.button-danger:hover {
+    -fx-background-color: #c82333;
+}
+
+/* Form elements in editor */
+.text-field, .text-area, .combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-radius: 4px;
+    -fx-padding: 8px;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .text-area:focused, .combo-box:focused {
+    -fx-border-color: #4a90e2;
+    -fx-border-width: 2px;
+}
+
+/* Preview area styling */
+.preview-area {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-radius: 4px;
+    -fx-padding: 10px;
+    -fx-font-family: "Georgia", serif;
+    -fx-font-size: 14px;
+    -fx-line-spacing: 1.5;
+}
+
+/* Tag display */
+.tags-container {
+    -fx-spacing: 5px;
+    -fx-padding: 5px;
+}
+
+.tag-chip {
+    -fx-background-color: #e3f2fd;
+    -fx-text-fill: #1565c0;
+    -fx-padding: 3px 8px;
+    -fx-background-radius: 12px;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Mood indicators */
+.mood-indicator {
+    -fx-font-size: 20px;
+    -fx-padding: 5px;
+}
+
+/* Progress indicators */
+.progress-indicator {
+    -fx-progress-color: #4a90e2;
+}
+
+/* Status messages */
+.status-success {
+    -fx-text-fill: #28a745;
+    -fx-font-weight: bold;
+}
+
+.status-error {
+    -fx-text-fill: #dc3545;
+    -fx-font-weight: bold;
+}
+
+.status-info {
+    -fx-text-fill: #17a2b8;
+    -fx-font-weight: bold;
+}
+
+/* Editor layout helpers */
+.editor-section {
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.editor-section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #495057;
+    -fx-padding: 0 0 10px 0;
+}
+
+/* Scrollbar styling for editor */
+.scroll-bar:vertical {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: transparent;
+    -fx-background-radius: 2px;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #adb5bd;
+    -fx-background-radius: 2px;
+}
+
+.scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #6c757d;
+}
+
+/* Context menu for editor */
+.context-menu {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+}
+
+.menu-item {
+    -fx-padding: 8px 15px;
+}
+
+.menu-item:hover {
+    -fx-background-color: #f8f9fa;
+}
+
+/* Auto-save indicator */
+.auto-save-indicator {
+    -fx-font-size: 11px;
+    -fx-text-fill: #6c757d;
+    -fx-font-style: italic;
+}
+
+/* Character/word counter */
+.counter {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6c757d;
+    -fx-padding: 5px;
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
+
+/* Formatting hints */
+.format-hint {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6c757d;
+    -fx-font-style: italic;
+    -fx-padding: 5px;
+    -fx-background-color: #fff3cd;
+    -fx-border-color: #ffeaa7;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+}
