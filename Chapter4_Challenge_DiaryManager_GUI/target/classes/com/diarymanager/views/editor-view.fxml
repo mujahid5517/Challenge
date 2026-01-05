@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.HTMLEditor?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.diarymanager.controller.EntryEditorController"
+            style="-fx-background-color: white;">
+
+    <top>
+        <BorderPane style="-fx-background-color: #4a90e2; -fx-padding: 10;">
+            <left>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="📝 Diary Editor" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+                </HBox>
+            </left>
+            <right>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <ProgressIndicator fx:id="progressIndicator" visible="false" prefWidth="24" prefHeight="24"/>
+                    <Label fx:id="lblStatus" text="Ready" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                </HBox>
+            </right>
+        </BorderPane>
+    </top>
+
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <!-- Title Input -->
+            <VBox spacing="5">
+                <Label text="Title:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                <TextField fx:id="txtTitle" promptText="Enter entry title..." style="-fx-font-size: 16px;"/>
+            </VBox>
+
+            <!-- Editor Toolbar Placeholder -->
+            <HBox fx:id="toolbar" spacing="5" style="-fx-padding: 5; -fx-background-color: #f8f9fa; -fx-border-color: #dee2e6; -fx-border-radius: 3;">
+                <!-- RichTextToolbar will be added programmatically -->
+            </HBox>
+
+            <!-- HTML Editor -->
+            <VBox spacing="5" VBox.vgrow="ALWAYS">
+                <Label text="Content:" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+                <HTMLEditor fx:id="htmlEditor" prefHeight="400"/>
+            </VBox>
+
+            <!-- Metadata -->
+            <GridPane hgap="15" vgap="10">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="50"/>
+                    <ColumnConstraints percentWidth="50"/>
+                </columnConstraints>
+
+                <!-- Mood Selection -->
+                <VBox>
+                    <Label text="Mood:" style="-fx-font-weight: bold;"/>
+                    <ComboBox fx:id="cmbMood" promptText="How are you feeling?"/>
+                </VBox>
+
+                <!-- Tags -->
+                <VBox>
+                    <Label text="Tags:" style="-fx-font-weight: bold;"/>
+                    <TextField fx:id="txtTags" promptText="Separate tags with commas..."/>
+                </VBox>
+            </GridPane>
+        </VBox>
+    </center>
+
+    <bottom>
+        <BorderPane style="-fx-background-color: #f8f9fa; -fx-padding: 15; -fx-border-color: #dee2e6; -fx-border-width: 1 0 0 0;">
+            <left>
+                <Label text="Tip: Auto-save is enabled. Your work is saved every 2 seconds."
+                       style="-fx-text-fill: #6c757d; -fx-font-style: italic;"/>
+            </left>
+            <right>
+                <HBox spacing="10">
+                    <Button fx:id="btnCancel" text="Cancel" styleClass="button-secondary"/>
+                    <Button fx:id="btnSave" text="Save Entry" styleClass="button-primary"/>
+                </HBox>
+            </right>
+        </BorderPane>
+    </bottom>
+
+</BorderPane>

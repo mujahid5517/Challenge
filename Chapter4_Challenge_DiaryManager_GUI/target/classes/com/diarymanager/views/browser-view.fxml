@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.diarymanager.controller.EntryBrowserController">
+
+    <top>
+        <BorderPane style="-fx-background-color: #28a745; -fx-padding: 10;">
+            <left>
+                <HBox spacing="10" alignment="CENTER_LEFT">
+                    <Label text="📂 Browse Entries" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+                </HBox>
+            </left>
+            <right>
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <ProgressIndicator fx:id="progressIndicator" visible="false" prefWidth="24" prefHeight="24"/>
+                    <Button fx:id="btnRefresh" text="🔄 Refresh" style="-fx-background-color: rgba(255,255,255,0.2); -fx-text-fill: white;"/>
+                    <Label fx:id="lblStatus" text="Ready" style="-fx-text-fill: white; -fx-font-weight: bold;"/>
+                </HBox>
+            </right>
+        </BorderPane>
+    </top>
+
+    <center>
+        <SplitPane dividerPositions="0.4" style="-fx-background-color: white;">
+            <!-- Left: List of entries -->
+            <VBox style="-fx-padding: 15;">
+                <Label text="Your Diary Entries" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 0 0 10 0;"/>
+                <ListView fx:id="entryListView" VBox.vgrow="ALWAYS"/>
+            </VBox>
+
+            <!-- Right: Entry details -->
+            <VBox fx:id="detailsPanel" visible="false" style="-fx-padding: 20;" spacing="15">
+                <VBox spacing="10">
+                    <Label fx:id="lblTitle" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #343a40;"/>
+                    <HBox spacing="20">
+                        <Label fx:id="lblDate" style="-fx-text-fill: #6c757d;"/>
+                        <Label fx:id="lblMood" style="-fx-font-weight: bold;"/>
+                    </HBox>
+                    <Label fx:id="lblTags" style="-fx-text-fill: #4a90e2; -fx-font-style: italic;"/>
+                </VBox>
+
+                <Separator/>
+
+                <VBox spacing="10" VBox.vgrow="ALWAYS">
+                    <Label text="Preview:" style="-fx-font-weight: bold;"/>
+                    <TextArea fx:id="previewArea" editable="false" wrapText="true"
+                              style="-fx-background-color: #f8f9fa; -fx-border-color: #dee2e6;"/>
+                </VBox>
+
+                <HBox spacing="10" alignment="CENTER_RIGHT">
+                    <Button fx:id="btnEdit" text="✏️ Edit" styleClass="button-primary"/>
+                    <Button fx:id="btnDelete" text="🗑️ Delete" styleClass="button-danger"/>
+                </HBox>
+            </VBox>
+        </SplitPane>
+    </center>
+
+    <bottom>
+        <BorderPane style="-fx-background-color: #f8f9fa; -fx-padding: 10; -fx-border-color: #dee2e6; -fx-border-width: 1 0 0 0;">
+            <left>
+                <Label text="Double-click an entry to open it. Use the preview panel to quickly review entries."
+                       style="-fx-text-fill: #6c757d;"/>
+            </left>
+        </BorderPane>
+    </bottom>
+
+</BorderPane>
